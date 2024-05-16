@@ -11,13 +11,13 @@ public class Fila {
         this.elementos = new Object[capacidade];
         this.tamanho = 0;
         this.inicio = 0;
-        this.fim = capacidade-1;
+        this.fim = tamanho-1;
     }
     public Object addFila (Object elemento){
         if (tamanho == capacidade)
             throw new IllegalStateException("Fila cheia.");
         fim++;
-        elementos[inicio] = elemento;
+        elementos[fim] = elemento;
         tamanho++;
         return elemento;
     }
